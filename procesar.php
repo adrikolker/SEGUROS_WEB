@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Por favor, verifica que no eres un robot.");
     }
 
-    $secretKey = "TU_CLAVE_SECRETA";
+    $secretKey = "6LcWNAgrAAAAAF_DjqhFQzqQ8oxISU3zwVfFBKuu";
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captcha");
     $responseKeys = json_decode($response, true);
 
